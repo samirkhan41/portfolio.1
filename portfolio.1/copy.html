@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Samir's Portfolio - Software Engineer</title>
+    <link href="path/to/your/styles.css" rel="stylesheet">
+
+    <!-- Inline CSS -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black theme */
+            color: #ff0000; /* Eyeball bright red for text accents */
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #4B2F2F; /* Andouille deep brown */
+            color: #fff;
+            text-align: center;
+            padding: 70px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-size: 1.6em;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            margin-top: 20px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff0000; /* Eyeball red */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Download CV Button */
+        .download-cv {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #006400; /* Barberry Bush green */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-cv:hover {
+            background-color: #98FB98; /* Lighter green on hover */
+            transform: scale(1.05);
+        }
+
+        /* Navigation Section */
+        nav {
+            background-color: #0f0f0f; /* Megadrive screen dark theme */
+            padding: 15px 0;
+            text-align: center;
+            border-top: 3px solid #ff0000; /* Eyeball accent */
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #ff00ff; /* Neon pink for futuristic hover effect */
+            transform: translateY(-5px);
+        }
+
+        /* Retro Scanline Effect */
+        nav {
+            background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 3px);
+            background-size: 100% 4px; /* Megadrive screen scanlines */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h3 {
+            font-size: 2.2em;
+            color: #8a2be2; /* Barberry Bush purple */
+            margin-bottom: 20px;
+        }
+
+        section p, section ul {
+            color: #ccc; /* Lighter text for dark background */
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .project {
+            background-color: #222222;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            flex: 1 1 30%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .project h4 {
+            font-size: 1.8em;
+            color: #8a2be2; /* Barberry Bush purple */
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #ccc;
+        }
+
+        /* Project Link Button */
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #006400; /* Barberry green */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .project a:hover {
+            background-color: #05ea05;
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        section#contact p {
+            font-size: 1.2em;
+        }
+
+        section#contact a {
+            color: #8a2be2; /* Barberry Bush accent */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        section#contact a:hover {
+            color: #07f307; /* Green hover effect */
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #ff00ff; /* Futuristic magenta for icons */
+            font-size: 2em;
+        }
+
+        .social-media a:hover {
+            color: #fc0808; /* Eyeball hover effect */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4B2F2F; /* Andouille deep brown */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1em;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Samir Khan</h1>
+        <h2>Software Engineer | Web Developer | Problem Solver</h2>
+        <img src="iamge.jpg" alt="Profile Picture" class="profile-pic">
+        <!-- Download CV Button -->
+        <a href="najimcv.pdf" download class="download-cv">Download CV</a>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I'm Samir Khan, a passionate software engineer with a strong background in web development and cloud technologies. I specialize in creating high-quality, efficient, and scalable software solutions. My goal is to use technology to solve real-world problems and make a positive impact.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>Programming Languages: JavaScript, Python, C++</li>
+            <li>Web Development: HTML, CSS, React, Node.js</li>
+            <li>Cloud Platforms: AWS, Azure</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="projects">
+            <div class="project">
+                <h4>Project 1: Online Marketplace</h4>
+                <p>Developed a scalable online marketplace with user authentication, product listings, and secure payment integration.</p>
+                <a href="https://yourprojectlink.com/marketplace" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h4>Project 2: Task Management Tool</h4>
+                <p>Built a task management tool with real-time collaboration and notification features using React and Firebase.</p>
+                <a href="https://yourprojectlink.com/tasktool" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h4>Project 3: Personal Portfolio</h4>
+                <p>Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript.</p>
+                <a href="https://yourprojectlink.com/portfolio" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:samirkha4575@gmail.com">samirkha4575@gmail.com</a></p>
+        <p>Phone: <a href="tel:+17857837294">785-783-7294</a></p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/yourusername" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100063464334576" target="_blank">Facebook</a>
+            <a href="https://youtube.com/@ziddyroster?si=hjasCrdD7QSQHDC0" target="_blank">YouTube</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Samir Khan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
